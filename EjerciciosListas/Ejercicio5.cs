@@ -23,7 +23,7 @@ namespace EjerciciosListas
             string palabra = txtPalabra.Text.Trim();
             if (!string.IsNullOrEmpty(palabra))
             {
-                char primeraLetra = palabra[0];
+                char primeraLetra = Char.ToLower(palabra[0]); // Convierte la primera letra a minúscula
 
                 // Agrega la palabra a la lista de todas las palabras
                 lstTodasLasPalabras.Items.Add(palabra);
@@ -38,6 +38,7 @@ namespace EjerciciosListas
                 txtPalabra.Clear();
             }
         }
+
 
         private void ActualizarListaPalabrasPorLetra()
         {
